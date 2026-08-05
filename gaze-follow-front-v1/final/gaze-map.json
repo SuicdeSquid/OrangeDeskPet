@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "gaze_follow_front",
+  "displayName": "正面坐姿视线跟随",
+  "version": "1.0.0",
+  "canvas": {
+    "width": 192,
+    "height": 208
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 0.971
+  },
+  "view": "front",
+  "kind": "pointer-reactive-set",
+  "trackingRadiusPxAt100Scale": 420,
+  "centerDeadZonePxAt100Scale": 52,
+  "switchDebounceMs": 80,
+  "returnToCenterDelayMs": 180,
+  "directionSectors": 8,
+  "sectorWidthDegrees": 45,
+  "sectorHysteresisDegrees": 7,
+  "directionFrames": {
+    "up": "gaze-up.png",
+    "up-right": "gaze-up-right.png",
+    "right": "gaze-right.png",
+    "down-right": "gaze-down-right.png",
+    "down": "gaze-down.png",
+    "down-left": "gaze-down-left.png",
+    "left": "gaze-left.png",
+    "up-left": "gaze-up-left.png"
+  },
+  "centerFrame": "gaze-center.png",
+  "selectionRule": "center inside dead-zone; outside it, convert atan2(dy, dx) to the nearest 45-degree sector with 7-degree hysteresis",
+  "notes": "Head and tail join the reaction; do not blend with eye-only drafts."
+}
